@@ -1,0 +1,12 @@
+---
+- name: setup group
+  group:
+    name: "{{ nginx_group }}"
+    system: true
+
+- name: setup user
+  user:
+    name: "{{ nginx_user }}"
+    system: true
+    createhome: false
+    group: "{{ nginx_group }}"
